@@ -1,6 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const MovieList = (props) => {
+  MovieList.propTypes = {
+    movies: PropTypes.array.isRequired,
+  };
+
   return (
     <>
       {props.movies.map((movie) => (
