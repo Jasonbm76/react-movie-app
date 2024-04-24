@@ -1,0 +1,14 @@
+:root,
+html,
+body {
+  background-color: #141414 !important;
+}
+
+body {
+  color: #ffffff;
+}
+
+.movie-app > .row {
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
