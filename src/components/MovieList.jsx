@@ -7,8 +7,6 @@ const MovieList = (props) => {
 
   const FavoriteComponent = props.favoriteComponent;
 
-  console.table(props.movies);
-
   const filteredMovies = props.movies
     .filter((movie) => {
       return movie.Poster != 'N/A';
@@ -28,7 +26,9 @@ const MovieList = (props) => {
               alt="movie"
             />
           </div>
-          <div className="overlay">
+          <div
+            className={`overlay ${props.favorStyle}`}
+            onClick={() => props.handleFavoritesClick(movie)}>
             <FavoriteComponent />
           </div>
 
@@ -40,26 +40,6 @@ const MovieList = (props) => {
     });
 
   return filteredMovies;
-
-  // const movieMap = props.movies;
-
-  // //console.info(movieMap);
-
-  // return (
-  //   <>
-  //     {props.movies.map((movie) => (
-  //       <div
-  //         key={movie.imdbID}
-  //         className="col-auto m-3">
-  //         <img
-  //           src={movie.Poster}
-  //           alt="movie"
-  //         />
-  //         <div className="overlay d-flex align-items-center justify-content-center">Add to Favorites</div>
-  //       </div>
-  //     ))}
-  //   </>
-  // );
 };
 
 export default MovieList;

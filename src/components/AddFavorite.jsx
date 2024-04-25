@@ -1,10 +1,4 @@
-import PropTypes from 'prop-types';
-
 const AddFavorite = () => {
-  AddFavorite.propTypes = {
-    searchValue: PropTypes.string.isRequired,
-    setSearchValue: PropTypes.func.isRequired,
-  };
   return (
     <>
       <span className="mr-2">Add to Favorites </span>

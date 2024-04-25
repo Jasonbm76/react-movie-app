@@ -24,21 +24,34 @@ body {
   padding: 0;
   align-items: center;
   border-radius: 8px;
-  //background: rgba(0, 0, 0, 0.8);
-  //border: solid 1px red;
 
   .overlay {
     position: absolute;
-    background: rgba(0, 0, 0, 0.8);
+    font-weight: bold;
     width: 171px;
     transition: 0.5s ease;
     opacity: 0;
-    top: 240px;
-    font-size: 14px;
+    top: 243px;
+    font-size: 12px;
     text-align: center;
     padding: 5px 0;
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
+    border: solid 0.2px rgba(255, 255, 255, 0.4);
+    border-top: 0;
+
+    &.add {
+      background: rgba(25, 92, 4, 0.9);
+    }
+
+    &.remove {
+      background: rgba(255, 0, 0, 0.8);
+    }
+
+    svg {
+      color: white;
+      fill: white;
+    }
   }
 
   &:hover {
@@ -51,7 +64,6 @@ body {
   }
 
   .image-container-inner {
-    //border: solid 1px blue;
     position: relative;
     margin-top: 10px;
 

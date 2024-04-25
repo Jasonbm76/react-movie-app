@@ -7,7 +7,7 @@ const MovieListHeading = (props) => {
 
   return (
     <div className="col-12 col-sm-8">
-      <h1>{props.heading}</h1>
+      <h2>{props.heading}</h2>
     </div>
   );
 };
